@@ -1,5 +1,133 @@
 /* CSS style-sheet for the COMP2110 Dashboard 2025 */
 
 body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0 10px;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+#header-date {
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto
+}
+
+.card {
+    background-color: #ffffff;
+    border:1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.weather-card, .lights-card, .sensors-card, .list-card {
+    flex: 1 1 300px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle input[type="checkbox"] {
+    display: none;
+}
+
+.toggle label {
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 30px;
+    position: relative;
+    width: 60px;
+}
+
+.toggle label::after {
     background-color: white;
+    border-radius: 50%;
+    content: '';
+    height: 26px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    transition: 0.3s;
+    width: 26px;
+}
+
+.toggle input[type="checkbox"]:checked + label {
+    background-color: #4CAF50;
+}
+
+.toggle input[type="checkbox"]:checked + label::after {
+    transform: translateX(30px);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
 }
